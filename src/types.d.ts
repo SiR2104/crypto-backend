@@ -1,4 +1,4 @@
-import {MysqlService} from "./services/mysql.service";
+import {DbService} from "./services/db.service";
 
 enum rights {
     "r" = 100,
@@ -53,7 +53,7 @@ interface error {
 
 interface authRequest extends Request {
     user: jwtPayload | undefined,
-    db: MysqlService | undefined,
+    db: DbService | undefined,
     cookies: {[key:string]: string}
     headers: authHeaders
 }
